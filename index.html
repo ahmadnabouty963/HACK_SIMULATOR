@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AHMAD-SYS // Terminal v4.2.1</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <!-- Matrix rain background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Scanline overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Main terminal window -->
+    <div class="terminal-wrapper">
+      <div class="terminal-container">
+        <!-- Title bar -->
+        <div class="terminal-titlebar">
+          <div class="titlebar-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="titlebar-title">AHMAD_SYS // root@shadow:~</div>
+          <div class="titlebar-status">
+            <span class="status-pulse"></span>
+            <span class="status-text">LIVE</span>
+          </div>
+        </div>
+
+        <!-- Boot sequence -->
+        <div class="terminal-body" id="terminal-body">
+          <div id="output-area"></div>
+
+          <!-- Input line -->
+          <div class="input-line" id="input-line">
+            <span class="prompt">root@shadow:~$&nbsp;</span>
+            <span class="input-text" id="input-display"></span>
+            <span class="cursor-block" id="cursor"></span>
+            <input
+              type="text"
+              id="hidden-input"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>
